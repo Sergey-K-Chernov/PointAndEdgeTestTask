@@ -15,23 +15,14 @@ typedef std::vector<Point> Points;
 
 struct Edge
 {
-	Point& begin;
-	Point& end;
-
-	Edge() = delete;
-	Edge(Point& begin, Point& end) : begin(begin), end(end)
-	{}
-
-	Edge(const Edge& e) : begin(e.begin), end(e.end)
-	{
-	}
-
-	Edge& operator = (const Edge& e)
-	{
-		begin = e.begin;
-		end = e.end;
-		return *this;
-	}
+	int beginId;
+	int endId;
 };
 
 typedef std::vector<Edge> Edges;
+
+struct Graph
+{
+	Points points;
+	Edges edges;
+};
