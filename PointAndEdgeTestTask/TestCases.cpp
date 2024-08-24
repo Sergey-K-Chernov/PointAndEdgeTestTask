@@ -101,6 +101,43 @@ void Test10PtsX1EdgeAlongYAxis(std::function<Edge(const Graph&, const Point& p)>
 	Point p = { 0.5, 0.0 };
 	auto result = func(graph, p);
 	assert (result.beginId == graph.edges[0].beginId && result.endId == graph.edges[0].endId);
+
+
+	p = { 0.0, 0.5 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[0].beginId && result.endId == graph.edges[0].endId);
+
+	p = { 0.0, 0.05 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[0].beginId && result.endId == graph.edges[0].endId);
+
+	p = { 0.0, 1.7 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[1].beginId && result.endId == graph.edges[1].endId);
+
+	p = { 0.0, 9.5 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[4].beginId && result.endId == graph.edges[4].endId);
+
+	p = { 0.0, 10.5 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[4].beginId && result.endId == graph.edges[4].endId);
+
+	p = { 25.0, 4.5 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[2].beginId && result.endId == graph.edges[2].endId);
+
+	p = { 0.0, 0.1 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[0].beginId && result.endId == graph.edges[0].endId);
+
+	p = { 0.0, 1.1 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[0].beginId && result.endId == graph.edges[0].endId);
+
+	p = { 0.0, 1.5 };
+	result = func(graph, p);
+	assert(result.beginId == graph.edges[0].beginId && result.endId == graph.edges[0].endId);
 }
 
 void Test100PtsX5EdgesZigzag(std::function<Edge(const Graph&, const Point& p)> func)
