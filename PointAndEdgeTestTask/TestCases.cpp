@@ -4,9 +4,10 @@
 
 void TestAll(std::function<Edge(const Graph&, const Point&)> func)
 {
-	//Test10PtsX1EdgeAlongXAxis(func);
-	//Test10PtsX1EdgeAlongYAxis(func);
+	Test10PtsX1EdgeAlongXAxis(func);
+	Test10PtsX1EdgeAlongYAxis(func);
 	Test100PtsX5EdgesZigzag(func);
+	Test100PtsX5EdgesFromRandom(func);
 }
 
 
