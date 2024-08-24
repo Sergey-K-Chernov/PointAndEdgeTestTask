@@ -42,9 +42,8 @@ void printGraphForTestCase(const Graph& graph, std::ostream& out)
 }
 
 
-int main()
+std::pair<Point, Point> task(size_t nPoints, size_t nEdges, Point point)
 {
-	//TestAll(FindNearestSegment);
 	auto graph = GenerateGraph(100, 5);
 
 	std::ofstream tc("tc.txt");
@@ -52,5 +51,16 @@ int main()
 
 	printGraphForTestCase(graph, tc);
 	printGraphForMatplotlib(graph, mpl);
+
+	auto edge = FindNearestSegment(graph, point);
+
+	return {graph.points[edge.beginId], graph.points[edge.endId]};
+}
+
+
+int main()
+{
+	TestAll(FindNearestSegment);	
+
 	return 0;
 }
