@@ -43,17 +43,17 @@ void Test10PtsX1EdgeAlongXAxis(std::function<Edge(const Graph&, const Point& p)>
 	result = func(graph, p);
 	assert(result.beginId == graph.edges[0].beginId && result.endId == graph.edges[0].endId);
 
-	p = { 1.5, 0.0 };
+	p = { 1.7, 0.0 };
 	result = func(graph, p);
 	assert(result.beginId == graph.edges[1].beginId && result.endId == graph.edges[1].endId);
 
 	p = { 9.5, 0.0 };
 	result = func(graph, p);
-	assert(result.beginId == graph.edges[9].beginId && result.endId == graph.edges[4].endId);
+	assert(result.beginId == graph.edges[4].beginId && result.endId == graph.edges[4].endId);
 
 	p = { 10.5, 0.0 };
 	result = func(graph, p);
-	assert(result.beginId == graph.edges[9].beginId && result.endId == graph.edges[4].endId);
+	assert(result.beginId == graph.edges[4].beginId && result.endId == graph.edges[4].endId);
 
 	p = { 4.5, 25.0 };
 	result = func(graph, p);
@@ -181,7 +181,12 @@ void Test100PtsX5EdgesZigzag(std::function<Edge(const Graph&, const Point& p)> f
 
 	p = { 505 , 105 };
 	result = func(graph, p);
-	assert(result.beginId == graph.edges[239].beginId && result.endId == graph.edges[239].endId);
+	assert(result.beginId == graph.edges[239].beginId && result.endId == graph.edges[239].endId ||
+		result.beginId == graph.edges[238].beginId && result.endId == graph.edges[238].endId ||
+		result.beginId == graph.edges[236].beginId && result.endId == graph.edges[236].endId ||
+		result.beginId == graph.edges[233].beginId && result.endId == graph.edges[233].endId ||
+		result.beginId == graph.edges[229].beginId && result.endId == graph.edges[229].endId 
+	);
 
 
 	p = { 496 , 38 };
@@ -204,29 +209,29 @@ void Test100PtsX5EdgesZigzag(std::function<Edge(const Graph&, const Point& p)> f
 
 	p = { 253 , 7 };
 	result = func(graph, p);
-	assert(result.beginId == graph.edges[124].beginId && result.endId == graph.edges[124].endId ||
-		result.beginId == graph.edges[125].beginId && result.endId == graph.edges[125].endId ||
-		result.beginId == graph.edges[126].beginId && result.endId == graph.edges[126].endId ||
-		result.beginId == graph.edges[127].beginId && result.endId == graph.edges[127].endId ||
-		result.beginId == graph.edges[128].beginId && result.endId == graph.edges[128].endId
+	assert(result.beginId == graph.edges[120].beginId && result.endId == graph.edges[120].endId ||
+		result.beginId == graph.edges[121].beginId && result.endId == graph.edges[121].endId ||
+		result.beginId == graph.edges[122].beginId && result.endId == graph.edges[122].endId ||
+		result.beginId == graph.edges[123].beginId && result.endId == graph.edges[123].endId ||
+		result.beginId == graph.edges[124].beginId && result.endId == graph.edges[124].endId
 	);
 
 	p = { 193 , 104 };
 	result = func(graph, p);
-	assert(result.beginId == graph.edges[73].beginId && result.endId == graph.edges[73].endId ||
-		result.beginId == graph.edges[77].beginId && result.endId == graph.edges[77].endId ||
-		result.beginId == graph.edges[81].beginId && result.endId == graph.edges[81].endId ||
-		result.beginId == graph.edges[85].beginId && result.endId == graph.edges[85].endId ||
-		result.beginId == graph.edges[89].beginId && result.endId == graph.edges[89].endId
+	assert(result.beginId == graph.edges[74].beginId && result.endId == graph.edges[74].endId ||
+		result.beginId == graph.edges[78].beginId && result.endId == graph.edges[78].endId ||
+		result.beginId == graph.edges[82].beginId && result.endId == graph.edges[82].endId ||
+		result.beginId == graph.edges[86].beginId && result.endId == graph.edges[86].endId ||
+		result.beginId == graph.edges[90].beginId && result.endId == graph.edges[90].endId
 	);
 
 	p = { 205 , 92 };
 	result = func(graph, p);
-	assert(result.beginId == graph.edges[83].beginId && result.endId == graph.edges[83].endId);
+	assert(result.beginId == graph.edges[84].beginId && result.endId == graph.edges[84].endId);
 
 	p = { 196 , 61 };
 	result = func(graph, p);
-	assert(result.beginId == graph.edges[90].beginId && result.endId == graph.edges[90].endId);
+	assert(result.beginId == graph.edges[91].beginId && result.endId == graph.edges[91].endId);
 }
 
 

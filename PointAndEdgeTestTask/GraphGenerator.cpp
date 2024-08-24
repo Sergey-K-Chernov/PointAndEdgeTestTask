@@ -2,8 +2,6 @@
 
 #include <random>
 
-const double BOTTOM = 0;
-const double TOP = 1000;
 
 Graph GenerateGraph(size_t nPoints, size_t nEdges)
 {
