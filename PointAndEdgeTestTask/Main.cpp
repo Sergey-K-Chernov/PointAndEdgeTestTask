@@ -38,7 +38,7 @@ void printGraphForTestCase(const Graph& graph, std::ostream& out)
 		out << "\t\t\t{" << edge.beginId << ", " << edge.endId << "},\n";
 
 	}
-	out << "\t\t},\n\t}\n";
+	out << "\t\t},\n\t};\n";
 }
 
 
