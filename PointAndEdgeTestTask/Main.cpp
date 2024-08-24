@@ -60,7 +60,12 @@ std::pair<Point, Point> task(size_t nPoints, size_t nEdges, Point point)
 
 int main()
 {
-	TestAll(FindNearestSegment);	
+	//TestAll(FindNearestSegment);	
+
+	auto result = task(77, 4, {456, 654});
+
+	std::cout << "{" << result.first.x << ", " << result.first.y << "}, {"
+			  << result.second.x << ", " << result.second.y << "}\n";
 
 	return 0;
 }
