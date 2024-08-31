@@ -16,7 +16,7 @@ Graph GenerateGraph(size_t nPoints, size_t nEdges)
 			double number;
 			do {
 				number = coordinates_distribution(random_generator);
-			} while (number == TOP);
+			} while (number == TOP); // TOP-1 wouldn't work because the number is double
 			return number;
 		};
 
