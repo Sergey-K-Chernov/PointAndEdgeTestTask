@@ -20,5 +20,7 @@ R<sub>1</sub>, R<sub>2</sub>
 ### Constraints
 
 0 <= X, Y < 1000;
+
 0 < K <= 5;
+
 50 <= N <= 100;
