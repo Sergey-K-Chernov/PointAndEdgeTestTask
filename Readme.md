@@ -1,5 +1,5 @@
-Generate and process threads
-============================
+A line section nearest to a point
+=================================
 
 This program has been written as a test task before a job interview.
 
