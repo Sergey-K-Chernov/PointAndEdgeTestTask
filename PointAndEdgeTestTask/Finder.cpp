@@ -15,7 +15,7 @@ static void Rotate(Point& end, Point& test)
 {
 	double length = end.length();
 
-	// Ќаправл€щие [ко]синусы угла поворота конечной точки отрезка
+	// Direction [co]sines of a segment's endpoint
 	double sine = end.y / length;
 	double cosine = end.x / length;
 
@@ -36,7 +36,7 @@ Edge FindNearestSegment(const Graph& graph, const Point& point)
 {
 	assert((graph.points.size() > 1) && (graph.edges.size() > 0));
 
-	Edge edge = { -1, -1 }; // Ћучше option, но дл€ тестового задани€, которое уже не требуетс€, сойдет.
+	Edge edge = { -1, -1 }; // Option is better but it's a quick test task 
 	if (!((graph.points.size() > 1) && (graph.edges.size() > 0)))
 		return edge;
 
