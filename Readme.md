@@ -7,7 +7,7 @@ The task
 --------
 
 Create N randomly distributed point on an XY coordinate plane. Every point is connected to a random K other points with edges. 
-Implement a function to find the edges (R<sub>1</sub>, R<sub>2</sub>) nearest to a given point P.
+Implement a function to find the edge (R<sub>1</sub>, R<sub>2</sub>) nearest to a given point P.
 
 ### Input
 
