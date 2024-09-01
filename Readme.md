@@ -6,7 +6,7 @@ This program has been written as a test task before a job interview.
 The task
 --------
 
-Create N randomly distributed point on an XY coordinate plane. Every point is connected to a random K other points with edges. 
+Create N randomly distributed points on an XY coordinate plane. Every point is connected to a random K other points with edges. 
 Implement a function to find the edge (R<sub>1</sub>, R<sub>2</sub>) nearest to a given point P.
 
 ### Input
