@@ -1,4 +1,4 @@
-A line section nearest to a point
+A line segment nearest to a point
 =================================
 
 This program has been written as a test task before a job interview.
